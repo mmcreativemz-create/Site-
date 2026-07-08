@@ -494,7 +494,7 @@
   <div class="section-head">
     <span class="tag">Sobre nós</span>
     <h2 id="about-heading">Uma equipa dedicada a transformar momentos em memórias eternas.</h2>
-    <p>A MM Creative é um estúdio moçambicano de fotografia e produção audiovisual, especializado em cobrir casamentos, eventos sociais e encontros corporativos com um olhar cinematográfico e narrativa visual de marca.</p>
+    <p>A MM Creative é um estúdio moçambicano de fotografia e produção audiovisual, especializado em cobrir casamentos, eventos sociais e encontros corporativos com um olhar cinematográfico e na[...]
   </div>
 </section>
 
@@ -503,7 +503,7 @@
   <div class="section-head">
     <span class="tag">Eventos Sociais</span>
     <h2 id="weddings-heading">Casamentos & Celebrações</h2>
-    <p>Três pacotes pensados para diferentes dimensões de celebração — da intimidade do pré-wedding à cobertura completa do grande dia, com book impresso, drone e logística incluída.</p>
+    <p>Três pacotes pensados para diferentes dimensões de celebração — da intimidade do pré-wedding à cobertura completa do grande dia, com book impresso, drone e logística incluída.</p[...]
   </div>
   <div class="pkg-grid" role="list">
     <div class="pkg-card" role="listitem">
@@ -607,14 +607,14 @@
 <section id="galeria" aria-labelledby="gallery-heading">
   <div class="section-head">
     <span class="tag">Portfólio</span>
-    <h2 id="gallery-heading">Momentos que já contámos</h2>
+    <h2 id="gallery-heading">Momentos que j�� contámos</h2>
   </div>
   <div class="gallery-grid" role="list">
-    <div class="g-item g1" role="listitem"><img id="g1" alt="Trabalho de fotografia 1" loading="lazy"></div>
-    <div class="g-item g2" role="listitem"><img id="g2" alt="Trabalho de fotografia 2" loading="lazy"></div>
-    <div class="g-item g3" role="listitem"><img id="g3" alt="Trabalho de fotografia 3" loading="lazy"></div>
-    <div class="g-item g4" role="listitem"><img id="g4" alt="Trabalho de fotografia 4" loading="lazy"></div>
-    <div class="g-item g5" role="listitem"><img id="g5" alt="Trabalho de fotografia 5" loading="lazy"></div>
+    <div class="g-item g1" role="listitem"><img id="g1" src="images/evento-corporativo-1.jpg" alt="Trabalho de fotografia 1 - Evento corporativo" loading="lazy"></div>
+    <div class="g-item g2" role="listitem"><img id="g2" src="images/celebracao-2.jpg" alt="Trabalho de fotografia 2 - Celebração" loading="lazy"></div>
+    <div class="g-item g3" role="listitem"><img id="g3" src="images/festa-3.jpg" alt="Trabalho de fotografia 3 - Festa" loading="lazy"></div>
+    <div class="g-item g4" role="listitem"><img id="g4" src="images/evento-4.jpg" alt="Trabalho de fotografia 4 - Evento" loading="lazy"></div>
+    <div class="g-item g5" role="listitem"><img id="g5" src="images/evento-corporativo-1.jpg" alt="Trabalho de fotografia 5" loading="lazy"></div>
   </div>
 </section>
 
@@ -774,31 +774,6 @@
       burgerBtn.classList.remove('active');
       burgerBtn.setAttribute('aria-expanded', 'false');
       mobileMenu.setAttribute('aria-hidden', 'true');
-    }
-  });
-
-  // Placeholder de imagens
-  const images = {
-    heroImg: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><rect fill="%23222" width="600" height="600"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Câmara Profissional</text></svg>',
-    img1: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Casamento Essencial</text></svg>',
-    img2: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Casamento Premium</text></svg>',
-    img3: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Casamento Signature</text></svg>',
-    img4: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Registo do Evento</text></svg>',
-    img5: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Registo Completo</text></svg>',
-    img6: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Registo Premium</text></svg>'
-  };
-
-  Object.keys(images).forEach(id => {
-    const img = document.getElementById(id);
-    if (img) img.src = images[id];
-  });
-
-  // Galeria
-  const galleryImages = ['g1', 'g2', 'g3', 'g4', 'g5'];
-  galleryImages.forEach((id, index) => {
-    const img = document.getElementById(id);
-    if (img) {
-      img.src = `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect fill="%23222" width="300" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Foto ${index + 1}</text></svg>`;
     }
   });
 </script>
