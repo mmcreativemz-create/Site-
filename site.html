@@ -494,7 +494,7 @@
   <div class="section-head">
     <span class="tag">Sobre nós</span>
     <h2 id="about-heading">Uma equipa dedicada a transformar momentos em memórias eternas.</h2>
-    <p>A MM Creative é um estúdio moçambicano de fotografia e produção audiovisual, especializado em cobrir casamentos, eventos sociais e encontros corporativos com um olhar cinematográfico e narrativa visual única.</p>
+    <p>A MM Creative é um estúdio moçambicano de fotografia e produção audiovisual, especializado em cobrir casamentos, eventos sociais e encontros corporativos com um olhar cinematográfico e narrativa visual de marca.</p>
   </div>
 </section>
 
@@ -779,13 +779,13 @@
 
   // Placeholder de imagens
   const images = {
-    heroImg: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><rect fill="%23222" width="600" height="600"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="24" fill="%23888">Câmara Profissional</text></svg>',
-    img1: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="%23888">Casamento Essencial</text></svg>',
-    img2: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="%23888">Casamento Premium</text></svg>',
-    img3: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="%23888">Casamento Signature</text></svg>',
-    img4: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%23888">Corporativo 1</text></svg>',
-    img5: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%23888">Corporativo 2</text></svg>',
-    img6: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%23888">Corporativo 3</text></svg>'
+    heroImg: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><rect fill="%23222" width="600" height="600"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Câmara Profissional</text></svg>',
+    img1: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Casamento Essencial</text></svg>',
+    img2: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Casamento Premium</text></svg>',
+    img3: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Casamento Signature</text></svg>',
+    img4: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Registo do Evento</text></svg>',
+    img5: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Registo Completo</text></svg>',
+    img6: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23222" width="400" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Registo Premium</text></svg>'
   };
 
   Object.keys(images).forEach(id => {
@@ -798,7 +798,7 @@
   galleryImages.forEach((id, index) => {
     const img = document.getElementById(id);
     if (img) {
-      img.src = `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect fill="%23222" width="300" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%23888">Galeria ${index + 1}</text></svg>`;
+      img.src = `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect fill="%23222" width="300" height="300"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23666" font-family="Arial" font-size="14">Foto ${index + 1}</text></svg>`;
     }
   });
 </script>
