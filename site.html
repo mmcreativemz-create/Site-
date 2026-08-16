@@ -68,7 +68,7 @@
     cursor:pointer;
   }
   .nav-cta:hover,.nav-cta:focus{background:var(--orange);color:#111;outline:none;}
-  
+
   /* BURGER MENU */
   .burger{
     display:none;font-size:26px;cursor:pointer;background:none;border:none;color:var(--cream);
@@ -113,15 +113,14 @@
   .hero::before{
     content:'';position:absolute;inset:0;
     background:
-      radial-gradient(ellipse 60% 50% at 80% 30%, rgba(255,107,26,0.25), transparent 60%),
-      linear-gradient(180deg, #0b0b0c 0%, #0b0b0c 100%);
-    z-index:0;
+      radial-gradient(ellipse 60% 50% at 80% 30%, rgba(255,107,26,0.18), transparent 60%),
+      linear-gradient(90deg, rgba(11,11,12,0.96) 0%, rgba(11,11,12,0.75) 45%, rgba(11,11,12,0.55) 100%),
+      linear-gradient(0deg, var(--bg) 0%, transparent 12%, transparent 88%, var(--bg) 100%);
+    z-index:1;
   }
   .hero-bg-img{
-    position:absolute;right:-5%;top:50%;transform:translateY(-50%);
-    width:60%;height:70%;opacity:0.35;
-    -webkit-mask-image:linear-gradient(to left, black 30%, transparent 95%);
-    mask-image:linear-gradient(to left, black 30%, transparent 95%);
+    position:absolute;inset:0;
+    width:100%;height:100%;object-fit:cover;object-position:center;
     z-index:0;
   }
   .hero-content{position:relative;z-index:2;max-width:680px;padding-top:80px;}
@@ -199,7 +198,8 @@
     backdrop-filter:blur(6px);
   }
   .pkg-card:hover,.pkg-card:focus{transform:translateY(-8px);border-color:rgba(255,107,26,0.4);outline:none;}
-  .pkg-img{height:280px;position:relative;overflow:hidden;}
+  .pkg-img{height:300px;position:relative;overflow:hidden;}
+  .pkg-img-tall{height:440px;}
   .pkg-img img{transition:transform .6s ease;}
   .pkg-card:hover .pkg-img img,.pkg-card:focus .pkg-img img{transform:scale(1.08);}
   .pkg-badge{
@@ -228,7 +228,7 @@
 
   /* GALLERY MASONRY */
   .gallery-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:14px;
+    display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px;
   }
   .g-item{border-radius:14px;overflow:hidden;position:relative;}
   .g-item img{transition:transform .6s ease;filter:grayscale(15%);}
@@ -341,11 +341,11 @@
   .skip-link:focus{top:0;}
 
   :focus-visible{outline:2px solid var(--orange);outline-offset:2px;}
-  
+
   @media(max-width:1200px){
     .strip-grid{grid-template-columns:repeat(3,1fr);}
     .why-grid{grid-template-columns:repeat(3,1fr);}
-    .gallery-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:150px;}
+    .gallery-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:190px;}
   }
 
   @media(max-width:768px){
@@ -354,81 +354,78 @@
     .nav-links{display:none;}
     .nav-cta{display:none;}
     .burger{display:block;}
-    
+
     .strip-grid{grid-template-columns:repeat(2,1fr);}
     .strip-item{border-right:none;border-bottom:1px solid var(--line);padding:15px 16px;}
-    
+
     .pkg-grid, .corp-mini-grid, .extras-grid, .why-grid{grid-template-columns:1fr;}
     .corp-grid{grid-template-columns:1fr;}
-    
-    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;}
+
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;}
     .g1{grid-column:span 2;}
     .g5{grid-column:span 2;}
-    
+
     .contact-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr;gap:34px;}
-    
+
     section{padding:80px 6%;}
-    .hero{min-height:auto;padding-top:140px;padding-bottom:60px;}
-    .hero-bg-img{position:relative;width:100%;height:200px;opacity:0.4;margin-top:40px;
-      -webkit-mask-image:linear-gradient(to bottom, black 40%, transparent 100%);
-      mask-image:linear-gradient(to bottom, black 40%, transparent 100%);
-      right:0;top:0;transform:none;}
-    
+    .hero{min-height:100vh;padding-top:140px;padding-bottom:60px;}
+
     .hero h1{font-size:clamp(28px,6vw,48px);}
     .hero p{font-size:16px;}
-    
+
     .scroll-hint{display:none;}
   }
 
   @media(max-width:480px){
     nav{padding:12px 4%;}
     .logo{font-size:16px;gap:6px;}
-    
+
     .hero{padding:0 4%;}
     .hero-content{max-width:100%;padding-top:60px;}
     .hero h1{font-size:clamp(24px,5vw,32px);margin-bottom:16px;}
     .hero p{font-size:14px;margin-bottom:24px;line-height:1.5;}
-    
+
     .hero-actions{gap:10px;flex-direction:column;width:100%;}
     .btn-primary,.btn-ghost{width:100%;padding:12px 20px;font-size:12px;}
-    
+
     section{padding:60px 4%;}
     .section-head{margin-bottom:40px;}
     .section-head h2{font-size:clamp(20px,5vw,28px);}
     .section-head p{font-size:14px;margin-top:12px;}
-    
+
     .strip-grid{grid-template-columns:1fr;gap:0;}
     .strip-item{padding:12px 10px;font-size:12px;border-right:none;border-bottom:1px solid var(--line);}
-    
+
     .pkg-card{border-radius:12px;}
-    .pkg-img{height:180px;}
+    .pkg-img{height:240px;}
+    .pkg-img-tall{height:340px;}
     .pkg-body{padding:20px 16px;}
     .pkg-body h3{font-size:18px;}
     .pkg-price{font-size:22px;}
     .pkg-list li{font-size:12px;padding:6px 0;}
-    
-    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:100px;gap:8px;}
-    
+
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;gap:8px;}
+
     .extras-wrap{padding:40px 4%;border-radius:16px;}
     .extras-grid{grid-template-columns:1fr;gap:16px;}
     .extra-card{padding:20px;}
     .extra-card h4{font-size:14px;}
-    
+
     .why-grid{grid-template-columns:1fr;gap:20px;}
     .why-card{padding:20px 0;}
     .why-card h4{font-size:16px;}
     .why-card p{font-size:13px;}
-    
+
     .contact-grid{gap:16px;}
     .contact-card{padding:24px 16px;}
     .contact-icon{font-size:24px;}
     .contact-value{font-size:14px;}
-    
+
     footer{padding:50px 4% 30px;}
     .footer-grid{gap:24px;}
     .footer-brand p{font-size:12px;}
-    
+
     .wa-float{width:50px;height:50px;bottom:16px;right:16px;font-size:22px;}
   }
 </style>
@@ -466,7 +463,7 @@
 <main id="main-content">
 
 <section class="hero" aria-label="Seção Hero">
-  <img class="hero-bg-img" id="heroImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect fill='%23131315' width='400' height='400'/%3E%3C/svg%3E" alt="Câmara profissional" loading="lazy">
+  <img class="hero-bg-img" id="heroImg" src="images/camera-hero.jpg" alt="Fotógrafo profissional com câmara e lente de longo alcance" loading="lazy" style="object-position:58% 30%;">
   <div class="hero-content">
     <span class="eyebrow">Estúdio de Fotografia & Vídeo · Maputo</span>
     <h1>Capturamos<br>detalhes e damos<br>vida ao <em>extraordinário</em>.</h1>
@@ -494,7 +491,7 @@
   <div class="section-head">
     <span class="tag">Sobre nós</span>
     <h2 id="about-heading">Uma equipa dedicada a transformar momentos em memórias eternas.</h2>
-    <p>A MM Creative é um estúdio moçambicano de fotografia e produção audiovisual, especializado em cobrir casamentos, eventos sociais e encontros corporativos com um olhar cinematográfico e na...</p>
+    <p>A MM Creative é um estúdio moçambicano de fotografia e produção audiovisual, especializado em cobrir casamentos, eventos sociais e encontros corporativos com um olhar cinematográfico e natural, sempre atento aos detalhes que tornam cada história única.</p>
   </div>
 </section>
 
@@ -507,7 +504,7 @@
   </div>
   <div class="pkg-grid" role="list">
     <div class="pkg-card" role="listitem">
-      <div class="pkg-img"><span class="pkg-badge">Pacote 01</span><img id="img1" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Crect fill='%23131315' width='400' height='280'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239a9a9f'%3EImagem: Casamento Essencial%3C/text%3E%3C/svg%3E" alt="Casamento pacote essencial" loading="lazy"></div>
+      <div class="pkg-img pkg-img-tall"><span class="pkg-badge">Pacote 01</span><img id="img1" src="images/casamento-essencial.jpg" alt="Casamento pacote essencial" loading="lazy" style="object-position:center 34%;"></div>
       <div class="pkg-body">
         <h3>Essencial</h3>
         <div class="pkg-price">30.000<span>MT</span></div>
@@ -523,7 +520,7 @@
       </div>
     </div>
     <div class="pkg-card" role="listitem">
-      <div class="pkg-img"><span class="pkg-badge">Pacote 02</span><img id="img2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Crect fill='%23131315' width='400' height='280'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239a9a9f'%3EImagem: Casamento Premium%3C/text%3E%3C/svg%3E" alt="Casamento pacote premium" loading="lazy"></div>
+      <div class="pkg-img pkg-img-tall"><span class="pkg-badge">Pacote 02</span><img id="img2" src="images/casamento-premium.jpg" alt="Casamento pacote premium" loading="lazy" style="object-position:center 24%;"></div>
       <div class="pkg-body">
         <h3>Premium</h3>
         <div class="pkg-price">45.000<span>MT</span></div>
@@ -539,7 +536,7 @@
       </div>
     </div>
     <div class="pkg-card" role="listitem">
-      <div class="pkg-img"><span class="pkg-badge">Pacote 03</span><img id="img3" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Crect fill='%23131315' width='400' height='280'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239a9a9f'%3EImagem: Casamento Signature%3C/text%3E%3C/svg%3E" alt="Casamento pacote signature" loading="lazy"></div>
+      <div class="pkg-img pkg-img-tall"><span class="pkg-badge">Pacote 03</span><img id="img3" src="images/casamento-signature.jpg" alt="Casamento pacote signature" loading="lazy" style="object-position:center 30%;"></div>
       <div class="pkg-body">
         <h3>Signature</h3>
         <div class="pkg-price">60.000<span>MT</span></div>
@@ -560,13 +557,12 @@
 <!-- CORPORATIVO -->
 <section id="corporativo" aria-labelledby="corporate-heading">
   <div class="section-head">
-    <span class="tag">Outros Eventos Sociais</span>
     <h2 id="corporate-heading">Cobertura Corporativa</h2>
     <p>Conferências, comícios e encontros de trabalho registados com discrição e profissionalismo — fotos, vídeos e flash para instituições e empresas.</p>
   </div>
   <div class="corp-mini-grid" role="list">
     <div class="pkg-card" role="listitem">
-      <div class="pkg-img"><span class="pkg-badge">Pacote 01</span><img id="img4" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Crect fill='%23131315' width='400' height='280'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239a9a9f'%3EImagem: Corporativo%3C/text%3E%3C/svg%3E" alt="Cobertura corporativa evento" loading="lazy"></div>
+      <div class="pkg-img"><span class="pkg-badge">Pacote 01</span><img id="img4" src="images/corporativo-01.jpg" alt="Oradora em conferência corporativa" loading="lazy" style="object-position:37% center;"></div>
       <div class="pkg-body">
         <h3>Registo do Evento</h3>
         <div class="pkg-price">7.500<span>MT</span></div>
@@ -576,7 +572,7 @@
       </div>
     </div>
     <div class="pkg-card" role="listitem">
-      <div class="pkg-img"><span class="pkg-badge">Pacote 02</span><img id="img5" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Crect fill='%23131315' width='400' height='280'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239a9a9f'%3EImagem: Corporativo Completo%3C/text%3E%3C/svg%3E" alt="Cobertura corporativa completa" loading="lazy"></div>
+      <div class="pkg-img"><span class="pkg-badge">Pacote 02</span><img id="img5" src="images/corporativo-02.jpg" alt="Sala de conferência com delegados" loading="lazy"></div>
       <div class="pkg-body">
         <h3>Registo Completo</h3>
         <div class="pkg-price">15.000<span>MT</span></div>
@@ -588,7 +584,7 @@
       </div>
     </div>
     <div class="pkg-card" role="listitem">
-      <div class="pkg-img"><span class="pkg-badge">Pacote 03</span><img id="img6" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Crect fill='%23131315' width='400' height='280'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239a9a9f'%3EImagem: Corporativo Premium%3C/text%3E%3C/svg%3E" alt="Cobertura corporativa premium" loading="lazy"></div>
+      <div class="pkg-img"><span class="pkg-badge">Pacote 03</span><img id="img6" src="images/corporativo-03.jpg" alt="Foto de grupo institucional em conferência" loading="lazy" style="object-position:43% 22%;"></div>
       <div class="pkg-body">
         <h3>Registo Premium</h3>
         <div class="pkg-price">20.000<span>MT</span></div>
@@ -610,11 +606,11 @@
     <h2 id="gallery-heading">Momentos que já contámos</h2>
   </div>
   <div class="gallery-grid" role="list">
-    <div class="g-item g1" role="listitem"><img id="g1" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect fill='%23131315' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%239a9a9f'%3EGaleria 1%3C/text%3E%3C/svg%3E" alt="Trabalho de fotografia 1 - Evento corporativo" loading="lazy"></div>
-    <div class="g-item g2" role="listitem"><img id="g2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect fill='%23131315' width='400' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%239a9a9f'%3EGaleria 2%3C/text%3E%3C/svg%3E" alt="Trabalho de fotografia 2 - Celebração" loading="lazy"></div>
-    <div class="g-item g3" role="listitem"><img id="g3" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 400'%3E%3Crect fill='%23131315' width='200' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%239a9a9f'%3EGaleria 3%3C/text%3E%3C/svg%3E" alt="Trabalho de fotografia 3 - Festa" loading="lazy"></div>
-    <div class="g-item g4" role="listitem"><img id="g4" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect fill='%23131315' width='400' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%239a9a9f'%3EGaleria 4%3C/text%3E%3C/svg%3E" alt="Trabalho de fotografia 4 - Evento" loading="lazy"></div>
-    <div class="g-item g5" role="listitem"><img id="g5" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 200'%3E%3Crect fill='%23131315' width='800' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%239a9a9f'%3EGaleria 5%3C/text%3E%3C/svg%3E" alt="Trabalho de fotografia 5" loading="lazy"></div>
+    <div class="g-item g1" role="listitem"><img id="gal1" src="images/galeria-1.jpg" alt="Noivos a caminhar de mãos dadas no jardim" loading="lazy"></div>
+    <div class="g-item g2" role="listitem"><img id="gal2" src="images/galeria-2.jpg" alt="Madrinhas de casamento reunidas" loading="lazy" style="object-position:54% center;"></div>
+    <div class="g-item g3" role="listitem"><img id="gal3" src="images/galeria-3.jpg" alt="Noiva a caminhar no jardim com vestido longo" loading="lazy" style="object-position:center 18%;"></div>
+    <div class="g-item g4" role="listitem"><img id="gal4" src="images/galeria-4.jpg" alt="Celebração do casal na receção" loading="lazy" style="object-position:40% center;"></div>
+    <div class="g-item g5" role="listitem"><img id="gal5" src="images/galeria-5.jpg" alt="Corte do bolo de casamento" loading="lazy" style="object-position:center 28%;"></div>
   </div>
 </section>
 
